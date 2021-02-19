@@ -131,7 +131,7 @@ a{
 .nav__block{
     position: fixed;
     top: 210px;
-    left: 140px;
+    left: 5px;
     height: 300px;
     width: 180px;
     display: flex;
@@ -337,5 +337,5 @@ a{
 .up{
     position: fixed;
     top: 80%;
-    left: 140px;
+    left: 5px;
 }
