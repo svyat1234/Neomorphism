@@ -17,6 +17,10 @@ body{
     padding: 20px 0;
     background: linear-gradient( #2f2f2f, #2a2a2a);
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.493);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
 }
 
 .logo__img{
@@ -29,12 +33,16 @@ body{
     align-items: center;
 }
 
+
 .header__navigation{
-    width: 70%;
+    width: 50%;
+    /* background-color: wheat; */
+}
+
+.header__info{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background-color: wheat; */
 }
 
 .header__nav{
@@ -62,9 +70,42 @@ a{
 }
 
 .header__personal{
-    width: 410px;
+    width: 120px;
     display: flex;
     justify-content: space-between;
+}
+
+.personal__button{
+    background: cyan;
+    color: black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:  5px 5px 25px #000000, -5px -5px 25px #ffffff46;
+    border: none;
+    font-size: 18px;
+    transition: .2s;
+    outline: none;
+    cursor: pointer;
+}
+
+.personal__button:hover{
+    /* transform: scale(1.2); */
+    transform: scale(1.1);
+    transition: .2s;
+}
+.personal__button:active{
+    box-shadow: none;
+    background: linear-gradient(145deg, #131313, #3d3d3d);
+    transform: scale(1);
+    transition: 0s;
+}
+
+.personal__img{
+    height: 25px;
 }
 
 
@@ -76,7 +117,7 @@ a{
 } */
 
 .promo{
-    padding-top: 100px;
+    padding-top: 200px;
 }
 
 .promo__block{
@@ -327,15 +368,151 @@ a{
     transform: scale(1.2);
 }
 
-.footer__personal{
-    width: 410px;
-    display: flex;
-    justify-content: space-between;
-}
 
 
+/* 
 .up{
     position: fixed;
-    top: 80%;
-    left: 5px;
+    bottom: 15%;
+    left: 5%;
+    padding: 20px 30px;
+    background: #2a2a2a;
+    border-radius: 50px;
+    box-shadow:  5px 5px 25px #131313, -5px -5px 25px #ffffff18;
+    border: none;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    transition: .2s;
+    outline: none;
+    cursor: pointer;
+}
+
+.up:hover{
+    transform: scale(1.1);
+    transition: .2s;
+}
+.up:active{
+    box-shadow: none;
+    background: linear-gradient(145deg, #131313, #3d3d3d);
+    transform: scale(1);
+    transition: 0s;
+} */
+
+
+@media (max-width:1260px){
+    .container{
+        max-width: 1000px;
+    }
+    .header__navigation{
+        width: 60%;
+    }
+}
+
+@media (max-width:1070px){
+    .container{
+        max-width: 800px;
+    }
+    .header__navigation{
+        width: 65%;
+    }
+    .utility__block{
+        flex-direction: column;
+    }
+    .utility__card{
+        max-width: 100%;
+    }
+    .utility__card:not(:first-child){
+        margin-top: 50px;
+    }
+}
+
+@media(max-width:900px){
+    .container{
+        max-width: 600px;
+    }
+    .header__navigation{
+        width: 80%;
+    }
+    .header__nav{
+        max-width: 340px;
+    }
+    .example__images{
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media(max-width:620px){
+    .container{
+        max-width: 370px;
+    }
+    .header__navigation{
+        width: 50px;
+        height: 50px;
+        position: relative;
+        background: url(../img/Hamburger_icon.png) no-repeat center / cover; 
+        background-size: 25px;
+        box-shadow:  5px 5px 15px #131313, -5px -5px 15px #ffffff18;
+        border-radius: 50%;
+    }
+    .logo__img{
+        width: 60px;
+    }
+    .header__info{
+        display: none;
+    }
+    .header__navigation:hover > .header__info{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        width: 100%;
+        top: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background: linear-gradient( #2f2f2f, #2a2a2a) fixed;
+        box-shadow:  5px 5px 25px #131313, -5px -5px 25px #ffffff18;
+    }
+    .header__nav{
+        height: 200px;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .header__link{
+        font-size: 23px;
+    }
+    .personal__button{
+        padding: 30px 30px;
+    }
+    .header__personal{
+        width: 150px;
+    }
+    .utility__info{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .promo__text{
+        font-size: 23px;
+    }
+    .work__text{
+        font-size: 23px;
+    }
+    .utility__text{
+        font-size: 23px;
+    }
+    .output__text{
+        font-size: 23px;
+    }
+    .footer__nav{
+        width: 280px;
+    }
+    .example__img:hover{
+        transform: scale(1.2);
+    }
+}
+
+@media (max-width:512px){
+    .container{
+        max-width: 320px;
+    }
 }
